@@ -1,1 +1,16 @@
-<p>admin works!</p>
+<!-- sidebar -->
+<mat-sidenav-container>
+        <mat-sidenav mode="push" [(opened)]="sideOpened" class="back-darkness-blue">
+            <app-sidenav-content></app-sidenav-content>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <mat-toolbar class="navbar back-dark-blue">
+                <div class="left-container">
+                    <button (click)="sideOpened=!sideOpened"  class="back-light-blue fab" mat-mini-fab>     
+                        <i class="material-icons">menu</i>
+                    </button>
+                    <h4>{{pagina}}</h4>
+                </div>
+            </mat-toolbar>
+        </mat-sidenav-content>
+    </mat-sidenav-container>

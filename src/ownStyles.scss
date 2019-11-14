@@ -1,0 +1,22 @@
+$darkness-blue: #152746;
+$dark-blue: #234071;
+$light-blue: #4C7AC8;
+$sky-blue:#00A7F7;
+
+
+.back-dark-blue{
+    background-color: $dark-blue !important;
+    color:white;
+}
+.back-darkness-blue{
+    background-color: $darkness-blue !important;
+    color:white;
+}
+.back-light-blue{
+    background-color: $light-blue !important;
+    color:white;
+}
+.back-sky-blue{
+    background-color: $sky-blue !important;
+    color:white;
+}

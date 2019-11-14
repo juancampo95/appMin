@@ -1,0 +1,33 @@
+$break-small: 415px;
+$break-large: 1200px;
+
+.navbar{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    .left-container{
+        display:flex;
+        justify-content:flex-start;
+        flex-flow: row;
+        align-items: center;
+        .fab{
+            margin-right: 1em;
+        }
+    }
+}
+// sideBar stylesheet
+mat-sidenav-container{
+    height: 100%;
+}
+mat-sidenav{
+    padding:16px;
+}
+mat-sidenav{
+    width: 300px;
+}
+
+@media screen and (max-width:$break-small){
+    mat-sidenav{
+        width: 70%;
+    }
+}

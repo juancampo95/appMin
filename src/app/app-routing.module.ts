@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MaterialModule } from './material.module';
 
-import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes = [
-  {path:"",redirectTo:"administracion",pathMatch:"full"},
-  {path:"administracion",component:AdminComponent}
+  {
+    path:"",redirectTo:"administracion",pathMatch:"full"
+  },
+  {
+    path: `administracion`, loadChildren: () =>
+      import('./pages/admin/admin.module').then(m => m.AdminModule)
+  }
 ];
 
 @NgModule({
   declarations:[
-    AdminComponent
   ],
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    MaterialModule
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,18 @@
+<div class="names-content">
+    <div class="profile_pic_circle"></div>
+    <span>{{company_name}}</span>
+    <span>{{username}}</span>
+    <mat-divider></mat-divider>
+</div>
+<mat-nav-list class="nav-lista" dense *NgFor="let enlace of enlaces">
+    <a mat-list-item href="">
+        <mat-icon matListIcon>{{enlace.icon}}</mat-icon>
+        <h3 matLine>{{enlace.name}}</h3>
+    </a>
+</mat-nav-list>
+<mat-nav-list class="nav-lista  ultima-lista-sidebar" dense> 
+    <a mat-list-item>
+        <mat-icon matListIcon>logout</mat-icon>
+        <h3 matLine>Cerrar Sesión</h3>
+    </a>
+</mat-nav-list>
