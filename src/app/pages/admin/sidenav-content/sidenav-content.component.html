@@ -4,8 +4,8 @@
     <span>{{username}}</span>
     <mat-divider></mat-divider>
 </div>
-<mat-nav-list class="nav-lista" dense *NgFor="let enlace of enlaces">
-    <a mat-list-item href="">
+<mat-nav-list class="nav-lista" dense>
+    <a mat-list-item href="{{enlace.ruta}}" *ngFor="let enlace of enlaces">
         <mat-icon matListIcon>{{enlace.icon}}</mat-icon>
         <h3 matLine>{{enlace.name}}</h3>
     </a>

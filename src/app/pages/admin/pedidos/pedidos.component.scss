@@ -1,0 +1,24 @@
+// @import '../../../../ownStyles.scss';
+// estilos que afectan el componente pedidos
+.full-container{
+    height: 92vh;
+}
+// estilos para componentes hijos
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding:0.3em 0.4em 0.3em 1em;
+    .nav-title{
+        font-size: 20px;
+    }
+}
+.padding-1{
+    padding:0.3em;
+}
+.comp-container{
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+}

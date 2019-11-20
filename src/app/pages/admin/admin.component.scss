@@ -1,5 +1,4 @@
-$break-small: 415px;
-$break-large: 1200px;
+@import '../../../ownStyles.scss';
 
 .navbar{
     height: 50px;
@@ -25,7 +24,9 @@ mat-sidenav{
 mat-sidenav{
     width: 300px;
 }
-
+mat-sidenav-content{
+    background-color: #EBEBEB;
+}
 @media screen and (max-width:$break-small){
     mat-sidenav{
         width: 70%;

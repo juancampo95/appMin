@@ -7,11 +7,15 @@ import { FormsModule } from '@angular/forms';
 //componentes
 import { AdminComponent } from './admin.component';
 import { SidenavContentComponent } from './sidenav-content/sidenav-content.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
+import { DetalleComponent } from './pedidos/detalle/detalle.component';
 
 @NgModule({
   declarations: [
     AdminComponent,
     SidenavContentComponent,
+    PedidosComponent,
+    DetalleComponent,
   ],
   imports: [
     CommonModule,
