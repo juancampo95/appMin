@@ -1,9 +1,27 @@
 <section class="comp-container">
     <nav class="nav back-dark-blue">
         <span class="nav-title">Detalle de pedido</span>
-        <button mat-raised-button class="back-sky-blue">
+        <button mat-raised-button class="back-sky-blue add-button">
             <i class="material-icons">add_circle_outline</i>
-            Agregar producto
+            <span>Agregar producto</span>
         </button>
     </nav>
+    <div class="pedidos-container">
+        <div class="pedidos-mesa-container">
+            <span>Asignar mesa</span>
+            <i  (click)="restarMesa(pedido_cargado)" class="material-icons icons-menos">remove_circle_outline</i>
+            <span>0</span>
+            <i (click)="sumarMesa(pedido_cargado)" class="material-icons icons-mas">add_circle_outline</i>
+        </div>
+        <app-tabla-productos></app-tabla-productos>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Agregar Comentario</mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field>
+                <input matInput placeholder="Comentario">
+            </mat-form-field>
+        </mat-expansion-panel>
+        <app-facturacion></app-facturacion>
+    </div>
 </section>

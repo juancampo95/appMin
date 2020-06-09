@@ -1,1 +1,40 @@
 @import '../pedidos.component.scss';
+
+.pedidos-container{
+    width: 100%;
+    padding:0.5em;
+    .pedidos-mesa-container{
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        align-items: center;
+        span{
+            font-size: 16px;
+            margin-right: 1em;
+        }
+        span:nth-child(3){
+            font-size: 18px;
+            margin: 0 0.7em;
+        }
+        .icons-menos,.icons-mas{
+            cursor: pointer;
+            font-weight: 100;
+            font-size: 22px;
+        }
+        .icons-menos{
+            color:$contrast-1-color;
+        }
+        .icons-mas{
+            color:$sky-blue;
+        }
+    }
+}
+
+
+@media screen and (max-width:$break-small){
+    .add-button{
+        span{
+            display: none;
+        }
+    }
+}

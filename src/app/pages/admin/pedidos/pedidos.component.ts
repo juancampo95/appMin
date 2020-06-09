@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pedido } from 'src/app/services/models/pedido-model';
 
 @Component({
   selector: 'app-pedidos',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pedidos.component.scss']
 })
 export class PedidosComponent implements OnInit {
+  pedidoCargado:Pedido = new Pedido();
 
   constructor() { }
 

@@ -9,6 +9,8 @@ import { AdminComponent } from './admin.component';
 import { SidenavContentComponent } from './sidenav-content/sidenav-content.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { DetalleComponent } from './pedidos/detalle/detalle.component';
+import { TablaProductosComponent } from './pedidos/detalle/tabla-productos/tabla-productos.component';
+import { FacturacionComponent } from './pedidos/detalle/facturacion/facturacion.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { DetalleComponent } from './pedidos/detalle/detalle.component';
     SidenavContentComponent,
     PedidosComponent,
     DetalleComponent,
+    TablaProductosComponent,
+    FacturacionComponent,
   ],
   imports: [
     CommonModule,

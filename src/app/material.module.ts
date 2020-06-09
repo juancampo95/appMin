@@ -5,7 +5,11 @@ import {
   MatSidenavModule,
   MatListModule,
   MatDividerModule,
-  MatIconModule
+  MatIconModule,
+  MatTableModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatInputModule
 } from '@angular/material';
 
 const materialComponents = [
@@ -14,7 +18,11 @@ const materialComponents = [
   MatSidenavModule,
   MatListModule,
   MatDividerModule,
-  MatIconModule
+  MatIconModule,
+  MatTableModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatInputModule
 ]
 
 

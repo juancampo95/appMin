@@ -1,0 +1,47 @@
+@import '../../pedidos.component.scss';
+.productos-table{
+    margin: 10px auto;
+    width: 100%;
+    padding: 0 1em;
+    tr.mat-header-row,tr.mat-row,tr.mat-footer-row{
+        height: 35px;
+    }
+    td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:last-of-type {
+        padding-right: 0;
+    }
+    td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type {
+        padding-left:0;
+    }
+    td.mat-cell,th.mat-header-cell,td.mat-footer-cell{
+        text-align: center;
+        font-size: 12px;
+    }
+    td.mat-cell:nth-child(2),th.mat-header-cell:nth-child(2){
+        text-align: left;
+    }
+    .remove-icon{
+        color: $contrast-1-color;
+        cursor: pointer;
+    }
+    .cantidad_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row;
+        .icons_cantidad{
+            font-size: 15px;
+            cursor: pointer;
+            font-weight: 100;
+        }
+        .icons_cantidad:nth-child(1){
+            color:$contrast-1-color;
+        }
+        .icons_cantidad:nth-child(3){
+            color:$sky-blue;
+        }
+        span{
+            margin:0 0.3em;
+            font-size: 14px;
+        }
+    }
+}
