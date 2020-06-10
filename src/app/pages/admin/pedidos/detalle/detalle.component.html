@@ -9,9 +9,9 @@
     <div class="pedidos-container">
         <div class="pedidos-mesa-container">
             <span>Asignar mesa</span>
-            <i  (click)="restarMesa(pedido_cargado)" class="material-icons icons-menos">remove_circle_outline</i>
-            <span>0</span>
-            <i (click)="sumarMesa(pedido_cargado)" class="material-icons icons-mas">add_circle_outline</i>
+            <i  (click)="modificarMesa(pedidoCargado,'restar')" class="material-icons icons-menos">remove_circle_outline</i>
+            <span>{{pedidoCargado.mesa}}</span>
+            <i (click)="modificarMesa(pedidoCargado,'sumar')" class="material-icons icons-mas">add_circle_outline</i>
         </div>
         <app-tabla-productos></app-tabla-productos>
         <mat-expansion-panel>
@@ -19,9 +19,9 @@
                 <mat-panel-title>Agregar Comentario</mat-panel-title>
             </mat-expansion-panel-header>
             <mat-form-field>
-                <input matInput placeholder="Comentario">
+                <input [(ngModel)]="pedidoCargado.comentario" matInput placeholder="Comentario">
             </mat-form-field>
         </mat-expansion-panel>
-        <app-facturacion></app-facturacion>
+        <app-facturacion [pedidoCargado]="pedidoCargado"></app-facturacion>
     </div>
 </section>
