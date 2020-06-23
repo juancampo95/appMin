@@ -7,5 +7,6 @@ export interface Producto{
     v_total?:number,
     foto?:string,
     anadido?:string,
-    tipo?:string
+    tipo?:string,
+    categoria:string
 }

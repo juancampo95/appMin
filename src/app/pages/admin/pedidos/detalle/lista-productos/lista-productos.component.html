@@ -1,0 +1,110 @@
+<div class="modal fade" data-easein="bounceLeftIn" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Elige los productos y cantidades</h5>
+          <button type="button" class="close close-icon" data-dismiss="modal" aria-label="Close">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+        <div class="modal-body row">
+          <div class="col-md-12">
+            <mat-form-field>
+              <input matInput [(ngModel)]="listaFilter.nombre" name="search" placeholder="Buscador de productos" type="text">
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <div class="filtros_rapidos_container">
+              <h5>Comidas</h5>
+              <div class="btn-group">
+                <button class="btn btn-filtro" *ngFor="let filtro of filtrosDeComida" (click)="filtrar(filtro)">{{filtro}}</button>
+              </div>
+            </div>
+            <table class="tabla-productos">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>Precio</th>
+                  <th width="70px">Agregar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let producto of listaDeProductos | filterBy:listaFilter">
+                  <tr *ngIf="producto.tipo==='comida'" >
+                    <td class="td_container_items">
+                      <div class="foto_product_list" [style.backgroundImage]="'url('+ '../../../assets/img/' + producto.foto +')'" ></div>
+                      <div class="nombre_desc_list">
+                          <h6>{{producto.nombre}}</h6>
+                          <p>{{producto.descripcion}}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <input  width="20px" min="1" class="form-control number_input" type="number" [(ngModel)]="producto.cantidad" (ngModelChange)="recalcularTotal(producto)">
+
+                    </td>
+                    <td>
+                      ${{producto.v_total | number}}
+                    </td>
+                    <td>
+                      <button *ngIf="producto.anadido == 0" (click)="anadirProducto(producto)" class="agregar_btn">
+                          <i class="material-icons">add_box</i>
+                      </button>
+                      <button *ngIf="producto.anadido == 1" (click)="borrarProducto(producto)" class="borrar_btn">
+                              <i class="material-icons">close</i>
+                      </button>
+                    </td>
+                  </tr>
+                </ng-container>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-6">
+            <div class="filtros_rapidos_container">
+              <h5>Bebidas</h5>
+              <div class="btn-group">
+                <button class="btn btn-filtro" *ngFor="let filtro of filtrosDeComida" (click)="filtrar(filtro)">{{filtro}}</button>
+              </div>
+            </div>
+            <table class="tabla-productos">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>Precio</th>
+                  <th width="70px">Agregar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let producto of listaDeProductos | filterBy:listaFilter">
+                  <tr *ngIf="producto.tipo==='bebida'" >
+                    <td class="td_container_items">
+                      <div class="foto_product_list" [style.backgroundImage]="'url('+ '../../../assets/img/' + producto.foto +')'" ></div>
+                      <div class="nombre_desc_list">
+                          <h6>{{producto.nombre}}</h6>
+                          <p>{{producto.descripcion}}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <input  width="20px" min="1" class="form-control number_input" type="number" [(ngModel)]="producto.cantidad" (ngModelChange)="recalcularTotal(producto)">
+
+                    </td>
+                    <td>
+                      ${{producto.v_total | number}}
+                    </td>
+                    <td>
+                      <button *ngIf="producto.anadido == 0" (click)="anadirProducto(producto)" class="agregar_btn">
+                          <i class="material-icons">add_box</i>
+                      </button>
+                      <button *ngIf="producto.anadido == 1" (click)="borrarProducto(producto)" class="borrar_btn">
+                              <i class="material-icons">close</i>
+                      </button>
+                    </td>
+                  </tr>
+                </ng-container>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+</div>

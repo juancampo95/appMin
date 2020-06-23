@@ -8,6 +8,7 @@ import { Pedido } from '../../../services/models/pedido-model';
 })
 export class PedidosComponent implements OnInit {
   pedidoCargado:Pedido = new Pedido();
+  
   constructor(){ 
     console.log(this.pedidoCargado);
   }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import { Component, OnInit, Input } from '@angular/core';
+import { Producto } from 'src/app/services/models/producto-model';
 
 @Component({
   selector: 'app-tabla-productos',
@@ -8,11 +8,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class TablaProductosComponent implements OnInit {
   displayedColumns:any=['cantidad','producto','valor_unidad','total','eliminar'];
-  productosAgregados:any=[
-    {cantidad: 2, producto: 'Salchipapa tocineta personal', valor_unidad: 1.0079, total: 'H'},
-    {cantidad: 2, producto: 'Salchipapa tocineta personal', valor_unidad: 1.0079, total: 'H'},
-    {cantidad: 2, producto: 'Salchipapa tocineta personal', valor_unidad: 1.0079, total: 'H'},
-  ];
+  @Input() productosAgregados;
   
   constructor() { }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Pedido } from '../../../../services/models/pedido-model';
-
+import { Producto } from '../../../../services/models/producto-model';
 
 
 @Component({
@@ -10,7 +10,8 @@ import { Pedido } from '../../../../services/models/pedido-model';
 })
 export class DetalleComponent implements OnInit {
   @Input() pedidoCargado:Pedido; /*trae los datos del pedido cargado*/
-  
+  productosAgregados:Producto[]=[];
+
   constructor() {
   }
 

@@ -18,7 +18,8 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forRoot(routes),
-    MaterialModule
+    MaterialModule,
+
   ],
   exports: [RouterModule]
 })

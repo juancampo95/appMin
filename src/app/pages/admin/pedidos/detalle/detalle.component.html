@@ -1,7 +1,11 @@
+
 <section class="comp-container">
     <nav class="nav back-dark-blue">
         <span class="nav-title">Detalle de pedido</span>
-        <button mat-raised-button class="back-sky-blue add-button">
+        <button mat-raised-button
+            class="back-sky-blue add-button" 
+            data-toggle="modal" 
+            data-target="#exampleModalCenter">
             <i class="material-icons">add_circle_outline</i>
             <span>Agregar producto</span>
         </button>
@@ -13,7 +17,9 @@
             <span>{{pedidoCargado.mesa}}</span>
             <i (click)="modificarMesa(pedidoCargado,'sumar')" class="material-icons icons-mas">add_circle_outline</i>
         </div>
-        <app-tabla-productos></app-tabla-productos>
+        <app-tabla-productos
+           [productosAgregados]="productosAgregados"
+        ></app-tabla-productos>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>Agregar Comentario</mat-panel-title>

@@ -30,7 +30,8 @@ const materialComponents = [
 @NgModule({
   imports:
   [
-    materialComponents
+    materialComponents,
+
   ],
   exports:
   [

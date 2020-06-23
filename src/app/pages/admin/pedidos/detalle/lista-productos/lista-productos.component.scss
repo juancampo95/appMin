@@ -1,0 +1,164 @@
+@import '../../pedidos.component.scss';
+.modal-xl{
+    width: 100%;
+}
+@media (min-width: 1200px){
+    .modal-xl {
+        max-width: 98%;
+    }
+}
+.modal-header{
+    background-color: $dark-blue;
+    color: white;
+    font-size: 20px;
+    padding:0.3em 1em;
+    border:none;
+    border-radius:0px!important; 
+    .close-icon,.close-icon:active,.close-icon:focus{
+        color: white;
+        border: none;
+        opacity: 1!important;
+        outline: none;
+        outline: none;
+    }
+}
+.modal-body {
+    padding: 0.4rem 1rem 1rem 1rem;
+}
+
+.modal-content{
+    border:none;
+    border-radius:0px!important;
+}
+
+.filtros_rapidos_container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    h5{
+        margin-top: 0;
+        margin-right:0.5em;
+    }
+}
+.btn-group{
+    display:flex;
+    justify-content: flex-end;
+    align-items:center;
+    .btn-filtro{
+        background-color: transparent;
+        border:none;
+        color:  $dark-blue;
+        padding: 0.1em 0.2em;
+        font-size: 12px;
+        height: 25px;
+        transition: all linear 0.2s;
+        margin:0 0.2em;
+    }
+    .btn-filtro:hover{
+        background-color: $dark-blue;
+        box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.4);
+        color:white;
+    }
+    .btn-filtro:focus{
+        background-color: #df1b1b;
+        color:white;
+        box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.4);
+        outline:none;
+    }
+}
+.tabla-productos{ 
+    width: 100%;
+    td:nth-child(2){
+        text-align: left;
+    }
+    td, th {
+        padding: 0.4em;
+        font-size: 12px;
+        vertical-align: middle;
+    }
+    th{
+        color: #A2A2A2;
+        background-color: #e9ecef;
+        border-top:0px;
+        border-color: #dee2e6;
+        background-color: transparent;
+        border-bottom: 1px solid #dee2e6;
+        font-weight: 200;
+        font-size: 14px!important;
+    }
+    td{
+        border-top: 0px;
+        .number_input{
+            width: 60px!important;
+            border: none;
+        }
+        .number_input:focus{
+           box-shadow: none;
+           outline:0px!important;
+        }
+        .agregar_btn{
+            border: none;
+            background: transparent;
+            vertical-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all linear 0.1s;
+            i{
+                font-size: 40px;
+                color: #4C7AC8;
+                transition: all linear 0.1s;
+            }      
+        }
+        .agregar_btn:hover{
+            i{
+                font-size: 45px;
+                color: rgb(53, 104, 192);
+            }   
+        }
+        .agregar_btn:focus{
+            box-shadow: none;
+            outline:0px!important;
+        }
+        .borrar_btn{
+            border: none;
+            background: transparent;
+            vertical-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all linear 0.1s;
+            i{
+                font-size: 40px;
+                color: rgb(255, 37, 37);
+                transition: all linear 0.1s;
+            }      
+        }
+        .borrar_btn:hover{
+            i{
+                font-size: 45px;
+                color: rgb(218, 37, 37);
+            }   
+        }
+        .borrar_btn:focus{
+            box-shadow: none;
+            outline:0px!important;
+        }
+    }
+}
+.td_container_items{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+    .foto_product_list{
+        padding:25px 36px;
+        background-position: center;
+        background-size: cover;
+        margin-right: 10px;
+    }
+    .nombre_desc_list{
+        h6,p{
+            margin-bottom: 0;
+        }
+    }
+}
